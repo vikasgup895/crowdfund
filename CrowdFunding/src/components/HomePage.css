@@ -1,0 +1,304 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+  }
+  
+  .home-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Header Section */
+  .hero-banner {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .hero-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-secondary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: #ff7f50;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background: #ff5722;
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  
+  .btn-secondary:hover {
+    background: #fff;
+    color: #2575fc;
+  }
+  
+  /* Highlighted Campaigns Section */
+  .highlighted-campaigns {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .highlighted-campaigns h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .campaign-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .campaign-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .campaign-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 10px;
+  }
+  
+  .campaign-card p {
+    font-size: 1rem;
+    margin: 0 10px 15px;
+  }
+  
+  .progress-bar {
+    background: #f1f1f1;
+    border-radius: 5px;
+    height: 10px;
+    margin: 0 10px 10px;
+  }
+  
+  .progress {
+    background: #6a11cb;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .step {
+    max-width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Benefits Section */
+  .benefits {
+    padding: 40px 20px;
+    background: #f9f9f9;
+  }
+  
+  .benefits h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .benefit {
+    max-width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Explore Campaigns Section */
+  .explore-campaigns {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .explore-campaigns h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .filters button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #6a11cb;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filters button:hover {
+    background: #2575fc;
+  }
+  
+  .search-bar {
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .testimonial-card {
+    max-width: 300px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-card h4 {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Statistics Section */
+  .statistics {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .statistics h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .stat {
+    max-width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .stat h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer Section */
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  

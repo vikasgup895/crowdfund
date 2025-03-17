@@ -1,0 +1,113 @@
+/* ProfilePage.css */
+.profile-page {
+    font-family: 'Arial', sans-serif;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .edit-button {
+    background: #2575fc;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background: #6a11cb;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tabs button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: #f9f9f9;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+  }
+  
+  .tabs button.active-tab {
+    border-bottom: 2px solid #2575fc;
+    color: #2575fc;
+  }
+  
+  .tabs button:hover {
+    color: #2575fc;
+  }
+  
+  .tab-content {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-footer {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .profile-footer a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #2575fc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .profile-footer a:hover {
+    color: #6a11cb;
+  }
+  
+  @media (max-width: 768px) {
+    .profile-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .tabs {
+      flex-direction: column;
+    }
+  
+    .tabs button {
+      text-align: left;
+    }
+  }
+  

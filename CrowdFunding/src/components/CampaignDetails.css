@@ -1,0 +1,108 @@
+/* General Container for Campaign Details */
+.campaign-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Campaign Title */
+  .campaign-details h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Campaign Image */
+  .campaign-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Campaign Description */
+  .campaign-details p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* Campaign Metrics (Goal, Raised, Supporters) */
+  .campaign-metrics {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .campaign-metrics p {
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  .campaign-metrics p strong {
+    color: #007bff;
+  }
+  
+  /* Call-to-Action Buttons */
+  .cta-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cta-buttons button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-buttons .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .cta-buttons .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .cta-buttons .btn-secondary {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .cta-buttons .btn-secondary:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .campaign-metrics {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cta-buttons button {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .campaign-details h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+  
