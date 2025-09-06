@@ -16,7 +16,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://crowdfund-vikas.vercel.app/",
+    origin: "https://crowdfund-vikas.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
