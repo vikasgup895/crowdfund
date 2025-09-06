@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CampaignCard from "../components/CampaignCard";
 import api from "../lib/api";
+const { VITE_API_BASE } = import.meta.env;
 
 export default function Dashboard() {
   const [profile, setProfile] = useState(null);
@@ -214,7 +215,7 @@ function ContributionRow({ contribution }) {
             <img
               src={
                 contribution.campaign.imageUrl.startsWith("/uploads")
-                  ? `http://localhost:5000${contribution.campaign.imageUrl}`
+                  ? `${VITE_API_BASE}${contribution.campaign.imageUrl}`
                   : contribution.campaign.imageUrl
               }
               alt={contribution.campaign.title}

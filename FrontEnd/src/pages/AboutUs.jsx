@@ -151,9 +151,16 @@ export default function AboutUs() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Page Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            About CrowdFund
-          </h1>
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <h1 className="text-4xl font-bold text-gray-900">
+              About CrowdFund
+            </h1>
+            <div className="bg-blue-600 text-white p-2 rounded-lg shadow-md">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We're on a mission to democratize funding and empower creators
             worldwide to bring their innovative ideas to life through community

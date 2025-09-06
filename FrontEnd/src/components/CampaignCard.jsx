@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+const { VITE_API_BASE } = import.meta.env;
 
 // Function to calculate days left from end date
 function calculateDaysLeft(endDate) {
@@ -40,7 +41,7 @@ export default function CampaignCard({ campaign }) {
             <img
               src={
                 campaign.imageUrl.startsWith("/uploads")
-                  ? `http://localhost:5000${campaign.imageUrl}`
+                  ? `${VITE_API_BASE}${campaign.imageUrl}`
                   : campaign.imageUrl
               }
               alt={campaign.title}

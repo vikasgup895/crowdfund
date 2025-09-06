@@ -6,8 +6,6 @@ node_modules/
 *.local
 
 # Uploaded files (optional: if you don't want to track media)
-uploads/
-
 # Logs
 *.log
 npm-debug.log*

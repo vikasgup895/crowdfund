@@ -336,8 +336,8 @@ export default function Footer() {
             </div>
             <div className="mt-8 md:mt-0 md:order-1">
               <p className="text-center text-sm text-gray-600">
-                &copy; 2025 CrowdFund. All rights reserved. Made with ❤️ for
-                creators worldwide.
+                &copy; 2025 CrowdFund. All rights reserved. Made with ❤️ by
+                Vikas Gupta for creators worldwide.
               </p>
             </div>
           </div>

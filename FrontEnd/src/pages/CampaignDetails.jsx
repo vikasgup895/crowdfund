@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuthContext";
 import { toast } from "react-toastify";
 import api from "../lib/api";
+const { VITE_API_BASE } = import.meta.env;
 
 export default function CampaignDetails() {
   const { id } = useParams();
@@ -161,7 +162,7 @@ export default function CampaignDetails() {
                   <img
                     src={
                       campaign.imageUrl.startsWith("/uploads")
-                        ? `http://localhost:5000${campaign.imageUrl}`
+                        ? `${VITE_API_BASE}${campaign.imageUrl}`
                         : campaign.imageUrl
                     }
                     alt={campaign.title}

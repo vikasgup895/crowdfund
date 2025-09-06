@@ -160,7 +160,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <StatCard value={campaigns.length} label="Total Campaigns" />
             <StatCard
-              value={`$${campaigns
+              value={`₹${campaigns
                 .reduce((sum, c) => sum + (c.currentAmount || 0), 0)
                 .toLocaleString()}`}
               label="Funds Raised"
