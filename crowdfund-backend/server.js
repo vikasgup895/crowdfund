@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://crowdfund-vikas.vercel.app/",
     credentials: true,
   })
 );
