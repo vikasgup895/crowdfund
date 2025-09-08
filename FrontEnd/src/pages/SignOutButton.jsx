@@ -1,5 +1,5 @@
 // src/SignOutButton.jsx
-import { useAuth } from "./hooks/useAuthContext";
+import { useAuth } from "../hooks/useAuthContext";
 import { toast } from "react-toastify";
 
 export default function SignOutButton() {

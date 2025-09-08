@@ -57,9 +57,10 @@ export default function SignInForm() {
             password: form.get("password"),
           }
         : {
-            name: form.get("firstName")?.trim(), // ✅ Change to 'name' to match backend
+            firstName: form.get("firstName")?.trim(), // ✅ Send firstName (matches backend)
             email: form.get("email")?.trim(),
             password: form.get("password"),
+            role: "backer", // ✅ Add default role as backer
           };
 
     try {
@@ -67,52 +68,47 @@ export default function SignInForm() {
         flow === "signIn" ? "/api/auth/login" : "/api/auth/register";
       const { data } = await api.post(endpoint, payload);
 
-      console.log("Auth response:", data); // Debug log
+      console.log("Auth response:", data); // Keep this for debugging
 
-      if (data?.token) {
-        // Store token
+      // ✅ Check for successful response properly
+      if (data?.token && data?.user) {
         localStorage.setItem("token", data.token);
 
-        // ✅ Ensure user object has consistent structure
         const user = {
           id: data.user?.id || data.user?._id,
           _id: data.user?._id || data.user?.id,
-          name: data.user?.name,
+          name: data.user?.name || data.user?.firstName,
+          firstName: data.user?.firstName || data.user?.name,
           email: data.user?.email,
           role: data.user?.role,
           ...data.user,
         };
 
-        console.log("Processed user object:", user); // Debug log
-
-        // Update auth context with processed user
         login(user);
 
-        toast.success(
-          flow === "signIn"
-            ? "Signed in successfully!"
-            : "Account created successfully!"
-        );
-
-        // Navigate based on flow
-        setTimeout(() => {
-          flow === "signUp" ? navigate("/profile") : navigate("/");
-        }, 1000);
+        if (flow === "signIn") {
+          toast.success("Signed in successfully!");
+          setTimeout(() => navigate("/"), 1000);
+        } else {
+          toast.success("Account created successfully!");
+          setTimeout(() => navigate("/profile"), 1000);
+        }
       } else {
-        toast.error("Unexpected response from server.");
+        toast.error("Registration failed - invalid response");
       }
     } catch (err) {
       console.error("Auth error:", err);
 
       let message = "An unexpected error occurred";
 
-      if (err.response?.status === 401) {
+      // ✅ Better error handling
+      if (err.response?.status === 400) {
+        message = err.response.data?.message || "Registration failed";
+      } else if (err.response?.status === 401) {
         message =
           flow === "signIn"
             ? "Invalid email or password"
-            : "Account already exists";
-      } else if (err.response?.status === 422) {
-        message = "Please check your input and try again";
+            : "Registration failed";
       } else if (err.response?.data?.message) {
         message = err.response.data.message;
       } else if (!navigator.onLine) {
@@ -190,7 +186,6 @@ export default function SignInForm() {
           )}
         </div>
 
-        {/* ✅ Fixed password field with proper positioning */}
         <div className="relative">
           <input
             className={`w-full px-4 py-3 pr-12 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${

@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx - Update the imports and component
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../hooks/useAuthContext";
-import SignOutButton from "../SignOutButton";
+import SignOutButton from "../pages/SignOutButton";
 import userImage from "../assets/user.png";
 
 export default function Navbar() {

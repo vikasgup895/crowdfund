@@ -12,7 +12,7 @@ export default function ProfileSetup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!lastName.trim()) {
+    if (!profile.firstName || !lastName.trim()) {
       toast.error("Please fill in all required fields");
       return;
     }
@@ -20,17 +20,17 @@ export default function ProfileSetup() {
     setIsLoading(true);
     try {
       const res = await axios.post("/api/auth/profile", {
+        firstName: profile.firstName,
         lastName: lastName.trim(),
         role,
         bio: bio.trim() || undefined,
       });
 
       if (res.status === 201 || res.status === 200) {
-        toast.success("Profile created successfully!");
-        // Reset form
-        setLastName("");
         setRole("backer");
         setBio("");
+        toast.success("Profile created successfully!");
+        window.location.href = "/dashboard"; // Redirect to dashboard
       } else {
         toast.error(res.data?.message || "Unexpected response");
       }
