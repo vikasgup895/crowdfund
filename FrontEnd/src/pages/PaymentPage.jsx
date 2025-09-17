@@ -138,7 +138,7 @@ export default function PaymentPage() {
             Payment Successful!
           </h2>
           <p className="text-gray-600 mb-4">
-            Thank you for your contribution of ${amount}
+            Thank you for your contribution of ₹{amount}
           </p>
           <p className="text-sm text-gray-500">
             Redirecting you back to the campaign...
@@ -179,7 +179,7 @@ export default function PaymentPage() {
           <div className="space-y-4 mb-6">
             <div className="flex justify-between">
               <span className="text-gray-600">Contribution Amount:</span>
-              <span className="font-semibold">${amount}</span>
+              <span className="font-semibold">₹{amount}</span>
             </div>
             {message && (
               <div className="flex justify-between">
@@ -192,7 +192,7 @@ export default function PaymentPage() {
             <div className="flex justify-between border-t pt-4">
               <span className="text-lg font-semibold">Total:</span>
               <span className="text-lg font-bold text-green-600">
-                ${amount}
+                ₹{amount}
               </span>
             </div>
           </div>
