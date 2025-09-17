@@ -98,7 +98,7 @@ npm run dev
 
 Frontend: Vercel
 
-Backend: Railway
+Backend: Render
 
 Database: MongoDB Atlas
 
