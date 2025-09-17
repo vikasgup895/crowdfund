@@ -29,7 +29,7 @@
 
 ### 🔑 Authentication
 
-![Signup Page](.\assets\login.png)
+![Signup Page](/assets/login.png)
 
 ### 👤 Home Page
 
